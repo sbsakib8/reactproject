@@ -1,10 +1,10 @@
 
-function Home() {
+function Home(props) {
   
 
     return (
       <div>
-        <h1>Home page</h1>
+        <h1>my name is {props.name}</h1>
       </div>
     )
   }
