@@ -1,9 +1,13 @@
 import React from 'react'
 
 function Contact() {
+  let onCopy = ()=>{
+         
+    alert('text copy')
+  }
   return (
     <div>
-      <h1>contart</h1>
+     <p onCopy={onCopy}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed maiores minus obcaecati dolores?</p>
     </div>
   )
 }
