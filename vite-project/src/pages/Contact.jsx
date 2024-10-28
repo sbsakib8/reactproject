@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Contact() {
   let onCopy = ()=>{
@@ -8,6 +8,7 @@ function Contact() {
   return (
     <div>
      <p onCopy={onCopy}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed maiores minus obcaecati dolores?</p>
+     <h1></h1>
     </div>
   )
 }
