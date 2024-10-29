@@ -7,7 +7,7 @@ function Contact() {
   }
   return (
     <div>
-     <p onCopy={onCopy}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed maiores minus obcaecati dolores?</p>
+     <p onCopy={onCopy}>this is the contact page</p>
      <h1></h1>
     </div>
   )
