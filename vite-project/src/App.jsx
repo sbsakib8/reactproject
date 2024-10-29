@@ -4,7 +4,7 @@ import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Home name='sabbir'/>
       <h1>hello would</h1>
       <Home name='sakib'/>
@@ -12,6 +12,8 @@ function App() {
       <Contact/>
       <Portfolio/>
       
+      
+
     </div>
   )
 }
