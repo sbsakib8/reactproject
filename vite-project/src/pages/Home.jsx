@@ -1,10 +1,10 @@
+import Navbar from '../component/Navber';
 import Portfolio from './Portfolio';
-import Contact from './Contact';
 
 function Home() {
     return (
       <div>
-       
+      <Navbar/>
         <h1>my name is home</h1>
        
         <Portfolio/>

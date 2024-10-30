@@ -1,18 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 
-function Navbar() { // Changed from Nevbar to Navbar
+function Navbar() {
   return (
     <div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link> {/* Capitalized "about" */}
+          <NavLink to="/about">About</NavLink> 
         </li>
         <li>
-          <Link to="/contact">Contact</Link> {/* Capitalized "contact" */}
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </div>

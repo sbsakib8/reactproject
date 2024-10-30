@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../component/Navber';
 
 function Contact() {
   let onCopy = ()=>{
@@ -7,6 +8,7 @@ function Contact() {
   }
   return (
     <div>
+      <Navbar/>
      <p onCopy={onCopy}>this is the contact page</p>
      <h1></h1>
     </div>

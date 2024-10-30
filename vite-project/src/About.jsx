@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from './component/Navber'
+
 
 function About() {
   return (
-    <div>this is about page</div>
+   
+    <div>
+       <Navbar/>
+      this is about page
+
+    </div>
   )
 }
 
