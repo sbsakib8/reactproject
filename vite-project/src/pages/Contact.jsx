@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../component/Navber';
+import Showdata from './Showdata';
 
 function Contact() {
  const [count ,setcount] = useState(0)
@@ -19,6 +20,8 @@ function Contact() {
      <h1></h1>
 
      <p>notification {count}</p>
+
+     <Showdata />
     </div>
   )
 }
