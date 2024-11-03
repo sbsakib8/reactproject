@@ -2,7 +2,10 @@ import React from 'react'
 
 function fff() {
   return (
-    <div>fff</div>
+    <div>fff
+      <h1></h1>
+    </div>
+  
   )
 }
 
