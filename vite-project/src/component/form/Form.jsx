@@ -16,6 +16,11 @@ function Form() {
         }
 
     )
+ 
+    const submitform= (e)=>{
+      e.preventDefault()
+      console.log(formobj);
+    }
 
 const inputobj = (proparty, value)=>{
     setform((proparobj)=>({
@@ -30,7 +35,7 @@ const inputobj = (proparty, value)=>{
 
   return (
     <div className=''>
-        <form className="row g-3 mt-5 px-5">
+        <form onSubmit={submitform} className="row g-3 mt-5 px-5">
            
   <div className="col-md-5">
     <label for="inputEmail4" className="form-label text-white">Email</label>
@@ -86,6 +91,14 @@ const inputobj = (proparty, value)=>{
     <button type="submit" className="btn btn-primary">Sign in</button>
   </div>
         </form>
+
+        <div>
+            <h2>{formobj.Email}</h2>
+            <h2>{formobj.Address}</h2>
+            <h2></h2>
+            <h2></h2>
+            <h2></h2>
+        </div>
     </div>
   )
 }
