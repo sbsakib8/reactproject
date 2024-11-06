@@ -1,3 +1,5 @@
+
+import Form from "./component/form/Form.JSX";
 import Navber from "./component/Navber";
 import Home from "./pages/home/Home";
 
@@ -6,6 +8,7 @@ function App() {
     <div>
      <Navber/>
      <Home />
+     <Form/>
     </div>
   )
 }
