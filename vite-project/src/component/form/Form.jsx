@@ -1,52 +1,91 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Form() {
+
+    const [formobj , setform] = useState(
+        {
+            Email:"",
+            Pass:"",
+            Address:"",
+            Address2:"",
+            City:"",
+            State:"",
+            Zip:"",
+            Chacked:''
+
+        }
+
+    )
+
+const inputobj = (proparty, value)=>{
+    setform((proparobj)=>({
+       ...proparobj,
+       [proparty]:value
+    }))
+}
+     
+
+
+
+
   return (
-    <div>
-        <form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4"/>
+    <div className=''>
+        <form className="row g-3 mt-5 px-5">
+           
+  <div className="col-md-5">
+    <label for="inputEmail4" className="form-label text-white">Email</label>
+    <input onChange={(e)=>inputobj('Email', e.target.value)} value={formobj.Email} type="email" className="form-control" id="inputEmail4"/>
   </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4"/>
+
+  <div className="col-md-5">
+    <label for="inputPassword4" className="form-label  text-white">Password</label>
+    <input onChange={(e)=>inputobj('Pass', e.target.value)} value={formobj.Pass} type="password" className="form-control" id="inputPassword4"/>
   </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"/>
+
+  <div className="col-10">
+    <label for="inputAddress" className="form-label  text-white">Address</label>
+    <input onChange={(e)=>inputobj('Address', e.target.value)}  value={formobj.Address} type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
   </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
+
+  <div className="col-10">
+    <label for="inputAddress2" className="form-label  text-white">Address 2</label>
+    <input onChange={(e)=>inputobj('Address2', e.target.value)}  value={formobj.Address2} type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
   </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity"/>
+
+  <div className="col-md-4">
+    <label for="inputCity" className="form-label  text-white">City</label>
+    <input onChange={(e)=>inputobj('City', e.target.value)}  value={formobj.City} type="text" className="form-control" id="inputCity"/>
   </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
+
+  <div className="col-md-4">
+    <label for="inputState" className="form-label  text-white">State</label>
+    <select onChange={(e)=>inputobj('State', e.target.value)}  value={formobj.State} id="inputState" className="form-select">
+      <option value=''>Choose</option>
+      <option value='Dhaka'>Dhake</option>
+      <option value='Gazipur'>Gazipur</option>
+      <option value='Rashahi'>Rashahi</option>
     </select>
   </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip"/>
+
+
+  <div className="col-md-2">
+    <label for="inputZip" className="form-label  text-white">Zip</label>
+    <input onChange={(e)=>inputobj('Zip', e.target.value)}   value={formobj.Zip} type="text" className="form-control" id="inputZip"/>
   </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck"/>
-      <label class="form-check-label" for="gridCheck">
+
+
+  <div className="col-12">
+    <div className="form-check">
+      <input checked={formobj.Chacked} className="form-check-input" type="checkbox" id="gridCheck"/>
+      <label className="form-check-label  text-white" for="gridCheck">
         Check me out
       </label>
     </div>
   </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+  <div className="col-10">
+    <button type="submit" className="btn btn-primary">Sign in</button>
   </div>
-</form>
+        </form>
     </div>
   )
 }
