@@ -1,10 +1,11 @@
 import Navber from "./component/Navber";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <div>
      <Navber/>
-     <h1 className=" bg-primary">hello sakib</h1>
+     <Home />
     </div>
   )
 }
