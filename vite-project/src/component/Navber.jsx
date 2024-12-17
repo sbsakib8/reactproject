@@ -1,14 +1,17 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import { NavLink , Outlet } from 'react-router-dom'
 
 
- function Navber() {
+function Navber() {
   return (
-    <nav>
-      <li><a href="/">home</a></li>
-      <li><a href="/about">about</a></li>
-      
-    </nav>
-  );
+    <div>
+        <ul>
+            <li><NavLink to='/'>home</NavLink> </li>
+            <li><NavLink to='/about'>about</NavLink> </li>
+        </ul>
+<Outlet/>
+    </div>
+  )
 }
-export default Navber;
+
+export default Navber
